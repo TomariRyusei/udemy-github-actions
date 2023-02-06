@@ -57,11 +57,11 @@ jobs:
         env:
           SERVER_USER: ${{ secrets.BACKEND_SERVER_USER }}
           SERVER_IP: ${{ secrets.BACKEND_SERVER_IP }}
-      - run: ssh ${SERVER_USER}@${SERVER_IP} sudo systemctl restart backend
+      - run: ssh ${SERVER_USER}@${SERVER_IP} sudo systemctl restart express
         env:
           SERVER_USER: ${{ secrets.BACKEND_SERVER_USER }}
           SERVER_IP: ${{ secrets.BACKEND_SERVER_IP }}
-      - run: ssh ${SERVER_USER}@${SERVER_IP} systemctl status backend
+      - run: ssh ${SERVER_USER}@${SERVER_IP} systemctl status express
         env:
           SERVER_USER: ${{ secrets.BACKEND_SERVER_USER }}
           SERVER_IP: ${{ secrets.BACKEND_SERVER_IP }}
